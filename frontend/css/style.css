@@ -10,7 +10,6 @@ body.theme-arsenal {
   --text-color: #4a0404;
   --accent-color: #ef4444;
   --bubble-me: #4a0404;
-
   --container-color: #fce4e4;
 }
 
@@ -18,7 +17,6 @@ body.theme-man-city {
   --text-color: #0c4a6e;
   --accent-color: #38bdf8;
   --bubble-me: #0c4a6e;
-
   --container-color: #f2f6f9;
 }
 
@@ -26,7 +24,6 @@ body.theme-chelsea {
   --text-color: #1e3a8a;
   --accent-color: #3b82f6;
   --bubble-me: #1e3a8a;
-
   --container-color: #ebf4ff;
 }
 
@@ -34,7 +31,6 @@ body.theme-man-utd {
   --text-color: #7f1d1d;
   --accent-color: #ef4444;
   --bubble-me: #7f1d1d;
-
   --container-color: #fff5f5;
 }
 
@@ -42,7 +38,6 @@ body.theme-spurs {
   --text-color: #0f172a;
   --accent-color: #94a3b8;
   --bubble-me: #0f172a;
-
   --container-color: #f8fafc;
 }
 
@@ -50,7 +45,6 @@ body.theme-liverpool {
   --text-color: #9991b1b;
   --accent-color: #b91c1c;
   --bubble-me: #991b1b;
-
   --container-color: #fdf2f2;
 }
 
@@ -64,19 +58,45 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition:
-    background-color 2s ease,
-    color 2s ease;
+  transition: background-color 2s ease, color 2s ease;
+  padding: 1rem;
 }
 
-.chat-container .nav-btn .main-heading .me .them .messages-log {
-  transition:
-    background-color 2s ease,
-    color 2s ease;
+button {
+  cursor: pointer;
 }
 
 ul {
   list-style-type: none;
+}
+
+.main-heading {
+  font-size: 8vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.3;
+  color: var(--bubble-me);
+  justify-self: flex-end;
+}
+
+.team-nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+@media (max-width: 768px) {
+  .team-nav ul {
+    gap: 1rem;
+    padding: 1rem;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+.nav-btn {
+  border: none;
+  background: transparent;
 }
 
 .logo-icon {
@@ -90,81 +110,58 @@ ul {
   transform: scale(1.1);
 }
 
-button {
-  cursor: pointer;
-}
-
-body {
-  padding: 1rem;
-}
-
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   height: 90vh;
-}
-
-.team-nav ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  padding: 1rem;
-}
-
-@media (max-width: 768px) {
-  .team-nav ul {
-    gap: 1rem;
-    padding: 1rem;
-
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-}
-
-.nav-btn {
-  border: none;
-  background: transparent;
-}
-
-.main-heading {
-  font-size: 8vw;
-  text-transform: uppercase;
-  white-space: nowrap;
-  opacity: 0.3;
-
-  color: var(--bubble-me);
-
-  justify-self: flex-end;
 }
 
 .chat-container {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-
   /* background-color: var(--container-color); */
   color: var(--text-color);
-
   width: 100vw;
   max-width: 100rem;
   height: 600px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
   border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+  .chat-container {
+    box-shadow: none;
+  }
 }
 
 .messages-log {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
   padding: 2rem;
   overflow-y: auto;
+}
+
+.message {
+  max-width: 50%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+  .message {
+    max-width: 80%;
+  }
+}
+
+.message-details {
+  display: flex;
+  gap: 0.3rem;
+  color: var(--text-color);
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 0.5rem;
 }
 
 .me {
@@ -173,31 +170,19 @@ main {
   align-self: flex-end;
 }
 
+.me .message-details {
+  color: #fff;
+}
+
 .them {
   background-color: var(--bubble-them);
   align-self: flex-start;
-}
-
-.message {
-  max-width: 50%;
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-
-@media (max-width: 768px) {
-  .message {
-    max-width: 80%;
-  }
-  .chat-container {
-    box-shadow: none;
-  }
 }
 
 .input-container {
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: 1rem;
   gap: 1rem;
 }
@@ -224,16 +209,8 @@ main {
   fill: var(--accent-color);
 }
 
-.message-details {
-  display: flex;
-  gap: 0.3rem;
-
-  color: var(--text-color);
-  align-items: center;
-  width: fit-content;
-  margin-bottom: 0.5rem;
+.chat-container .nav-btn .main-heading .me .them .messages-log {
+  transition: background-color 2s ease, color 2s ease;
 }
 
-.me .message-details {
-  color: #fff;
-}
+/*# sourceMappingURL=style.css.map */
