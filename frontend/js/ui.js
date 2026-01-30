@@ -61,16 +61,4 @@ export const renderMessage = (message, currentUsername) => {
   messageDiv.appendChild(messageTextContent);
 
   messageLogContainer.appendChild(messageDiv);
-
-  // <div class="message me">
-  //           <div class="message-details">
-  //             <span><strong>User Test</strong></span>
-  //             <span>&bull;</span>
-  //             <span>30 minutes ago</span>
-  //           </div>
-  //           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-  //           nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-  //           distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-  //           perferendis labore.
-  //         </div>
 };

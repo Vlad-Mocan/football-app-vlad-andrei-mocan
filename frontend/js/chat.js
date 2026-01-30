@@ -11,6 +11,7 @@ export const setupChat = (socket, render, currentUsername) => {
     render(msg, currentUsername);
   });
 };
+
 export const switchRoom = (socket, newRoom, currentRoom) => {
   if (currentRoom === newRoom) return;
 
