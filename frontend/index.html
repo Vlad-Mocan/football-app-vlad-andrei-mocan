@@ -77,126 +77,9 @@
       </nav>
     </header>
 
-    <main aria-label="Chat Application">
+    <main class="main-container hidden" aria-label="Chat Application">
       <section class="chat-container" aria-label="Team Chat">
-        <div class="messages-log">
-          <div class="message me">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-
-          <div class="message them">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-
-          <div class="message me">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-
-          <div class="message them">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-
-          <div class="message me">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-
-          <div class="message me">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-
-          <div class="message me">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-          <div class="message them">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-          <div class="message them">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-          <div class="message them">
-            <div class="message-details">
-              <span><strong>User Test</strong></span>
-              <span>&bull;</span>
-              <span>30 minutes ago</span>
-            </div>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, natus
-            nam? Provident quasi adipisci, ipsa totam in quibusdam, ad mollitia
-            distinctio eaque voluptatum voluptas non voluptate debitis aliquam
-            perferendis labore.
-          </div>
-        </div>
+        <div class="messages-log"></div>
 
         <form class="input-container">
           <textarea
@@ -204,6 +87,7 @@
             id="msg-input"
             placeholder="Join the conversation..."
             rows="1"
+            name="msg"
           ></textarea>
 
           <button class="attach-btn" type="button">
@@ -233,10 +117,13 @@
           </button>
         </form>
       </section>
-
-      <footer class="footer">
-        <h1 class="main-heading">PREMIER LEAGUE</h1>
-      </footer>
     </main>
+
+    <footer class="footer">
+      <h1 class="main-heading">PREMIER LEAGUE</h1>
+      <h2 class="second-heading">CHOOSE A TEAM TO ENTER A CHAT</h2>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
   </body>
 </html>

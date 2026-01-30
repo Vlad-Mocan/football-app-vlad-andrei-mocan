@@ -12,6 +12,8 @@ body {
     background-color 2s ease,
     color 2s ease;
   padding: 1rem;
+
+  min-height: 90dvh;
 }
 
 button {
@@ -20,4 +22,8 @@ button {
 
 ul {
   list-style-type: none;
+}
+
+.hidden {
+  display: none;
 }

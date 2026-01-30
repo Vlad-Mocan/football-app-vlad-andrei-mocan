@@ -60,6 +60,7 @@ body {
   color: var(--text-color);
   transition: background-color 2s ease, color 2s ease;
   padding: 1rem;
+  min-height: 90dvh;
 }
 
 button {
@@ -70,13 +71,8 @@ ul {
   list-style-type: none;
 }
 
-.main-heading {
-  font-size: 8vw;
-  text-transform: uppercase;
-  white-space: nowrap;
-  opacity: 0.3;
-  color: var(--bubble-me);
-  justify-self: flex-end;
+.hidden {
+  display: none;
 }
 
 .team-nav ul {
@@ -115,7 +111,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
 }
 
 .chat-container {
@@ -211,6 +206,25 @@ main {
 
 .chat-container .nav-btn .main-heading .me .them .messages-log {
   transition: background-color 2s ease, color 2s ease;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer h2 {
+  font-size: 5vw;
+}
+
+.main-heading {
+  font-size: 8vw;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.3;
+  color: var(--bubble-me);
 }
 
 /*# sourceMappingURL=style.css.map */
